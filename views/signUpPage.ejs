@@ -1,0 +1,85 @@
+<%- include("Partials/headerInfo.ejs") %>
+
+  <body id="signUpBody">
+  <div id="page-container">
+      <div id="content-wrap">
+      <header>
+        <a href="/"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>
+        <h1 class="title">Sign Up</h1>
+      </header>
+    
+      <main>
+        <form action="/user/new" method="POST" id="signUpform">
+          <table>
+            <tr>
+            <td></td>
+              <td class="errorMessagee">
+              <% if(typeof error != "undefined" ) { %>
+              <%= error %>
+              <% } %> 
+              </td>
+            </tr>
+            <tr>
+              <td>First Name:</td>
+              <td><input name="firstName" type="text" required><br></td>
+            </tr>
+            <tr>
+              <td>Last Name:</td>
+              <td> <input name="lastName" type="text" required><br></td>
+            </tr>
+            <tr> 
+              <td>Email:</td>
+              <td> <input name="email" type="text" required><br><small id="emailHelp">We'll never share your email.</small><br></td>
+            </tr> 
+            <tr>
+              <td>Desired Username:</td>
+              <td><input name="userName" id="userNameBox" type="text" required><span id="nameFeedback"></span></td>
+            </tr>
+            <tr>
+              <td>Password:</td>
+              <td><input name="password" id="passwordBox"  type="password" min="6" max="12" required><br><span id="suggPwd"></span><br></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td>Password Again:</td>
+              <td> <input name="password2" type="password" id ="reTypePassword" min="6" max="12" required><br><span id="validationOfPassword"></span></td>
+            </tr>
+            <tr></tr>
+            <tr>
+              <td>
+              </td>
+              <td><input name="submitButton" type="submit" id="submitButton" value="Sign up!" class="homeButton"></td>
+            </tr>
+          </table>
+        </form>
+      </main>
+    
+    </div>
+      <footer class="loginFoot">
+        <div class="linkGraph" style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%; pointer-events: none; "><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe class = "linkGraph" src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div></div>     </footer>   
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>
+<!--
+<form action="/user/new" method="POST">
+  First Name: <input name="firstName" type="text"><br> 
+  Last Name: <input name="lastName" type="text"><br> 
+  Email: <input name="email" type="text"><br> 
+  Desired Username: <input name="userName" type="text"><br>
+  Password: <input name="password" type="password"><br>
+  Password Again: <input name="password2" type="password"><br>
+  <br>
+  <input name="submitButton" type="submit" value="Sign up!">
+</form>-->
+<!--
+<form action="/user/new" method="POST">
+  First Name: <input name="firstName" type="text"><br> 
+  Last Name: <input name="lastName" type="text"><br> 
+  Email: <input name="email" type="text"><br> 
+  Desired Username: <input name="userName" type="text"><br>
+  Password: <input name="password" type="password"><br>
+  Password Again: <input name="password2" type="password"><br>
+  <br>
+  <input name="submitButton" type="submit" value="Sign up!">
+</form>-->

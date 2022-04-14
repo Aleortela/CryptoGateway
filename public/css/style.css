@@ -1,0 +1,316 @@
+
+.homeselect, .accounthomeselect, .signedhomeselect{
+  float: right;
+  display: flex;
+  margin-top: 30px;
+}
+
+.Icon, .footerImage{
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+}
+.searchIcon{
+  width: 40px;
+  height: 40px;
+  margin: 2px;
+  margin-right: 10px;
+  margin-top: 0;
+  padding: 5px;
+  color: purple;
+  box-shadow: 5px 5px 8px #e699ff;
+  border-radius: 12px;
+}
+.cryptoGateway, .accountcryptoGateway, .signedcryptoGateway, #favoritesBody{
+  text-align: center;
+  background-color:  	#9900cc;
+  box-shadow: 5px 5px 8px #e699ff; 
+  width: auto;
+  height:50px ; 
+}
+
+body{
+  background-image:url("/img/background.png") ; 
+  background-size: cover;
+  overflow: auto;
+  /*background-repeat:no-repeat;*/
+}
+.title{
+  text-align: center;
+  background-color:  	#9900cc;
+  box-shadow: 5px 5px 8px #e699ff;
+  color: black;
+}
+#signUpBody{
+  color: white;
+}
+
+#loginform{
+    width: 300px;
+    margin:auto;
+}
+.homeButton, .accounthomeButton{
+  margin: 2px;
+  margin-right: 10px;
+  margin-top: 0;
+  padding: 5px;
+  color: purple;
+  box-shadow: 5px 5px 8px #e699ff;
+  border-radius: 12px;
+}
+
+#signUpform{
+  width: 500px;
+  margin:auto;
+  margin-top:0;  
+}
+ tr,td{
+  padding: 15px;
+}
+
+.table-fixed {
+    margin-left: 25rem;
+    margin-top: 10rem;
+}
+
+.table-fixed thead,
+.table-fixed thead>th {
+    background: #4d7275;
+    color: #fff;
+}
+
+.table-fixed tbody tr td {
+    background: #fff;
+}
+
+.table-fixed>thead>tr>th {
+    border: 0 !important;
+}
+
+.table-fixed>tbody>tr>td:last-child {
+    border-right: 0;
+}
+
+.table-fixed tbody td,
+.table-fixed thead>tr>th {
+    float: left;
+    font-size: 14px;
+    padding-left: 20px !important;
+}
+
+.table-fixed .col {
+    width: 25%;
+}
+
+.table-fixed tbody {
+    display: block;
+    height: 300px;
+    overflow-y: auto;
+}
+
+.table-fixed tr {
+    display: block;
+} 
+
+.table-fixed loginTr, .table-fixed loginTd{
+  padding: 20px;
+  display: block;
+  table-layout: auto;
+}
+
+footer{
+  display: inline;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+}
+.loginFoot{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  
+}
+
+#favfoot, #profileEditFoot{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+
+.signedhomeButton{
+  margin-right: 10px;
+  margin-top: 0;
+  padding: 5px;
+  color: purple;
+  box-shadow: 5px 5px 8px #e699ff;
+  border-radius: 12px;
+}
+
+/*for homepage table of random coins*/
+
+.cointable{
+ width: 60%; 
+ border-collapse: collapse;
+ border-spacing: 0;
+ box-shadow: 0 5px 15px rgba(245, 5, 245, 0.5);
+ border-radius: 12px 12px 0 0;
+ overflow: hidden;
+}
+.tbhead , .tbrow{
+ padding: 15px 20px;
+ text-align: center;
+ 
+}
+.tbhead{
+ background-color: #ba68c8;
+ color: #fafafa;
+ font-family: 'Open Sans',Sans-serif;
+ font-weight: 200;
+ text-transform: uppercase;
+
+}
+.tbrow{
+ width: 100%;
+ background-color: #f0def3;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.split-data , .split-row{
+  padding: 15px 20px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.split{
+  text-align: center;
+ margin: auto;
+ margin-top: 5%;
+ pointer-events: none;
+}
+.linksGraph{
+  pointer-events: none;
+  border:0;
+  margin:0;
+  padding:0;
+  line-height:14px;
+}
+.errorMessage{
+  color: rgb(223, 37, 37);
+  font: 1em sans-serif;
+  font-size: 30px;
+}
+
+#homeSearchTable{
+  text-align: center;
+  width: 500px;
+  margin:auto;
+  margin-top: 1%;
+}
+
+.widgetOuter{
+  width: 400px; 
+  height:400px; 
+  background-color: #1D2330; 
+  overflow:hidden; 
+  box-sizing: border-box; 
+  border: 1px solid #f0def3;
+  text-align: right; 
+  line-height:14px; 
+  block-size:220px; 
+  font-size: 12px; 
+  font-feature-settings: normal; 
+  text-size-adjust: 100%;  
+  padding:1px;
+  margin: 0px;
+  box-shadow: 0 5px 15px rgba(245, 5, 245, 0.5);
+  border-radius: 12px;
+}
+
+.widgetOuter2{ 
+  height:560px; 
+  background-color: #1D2330; 
+  overflow:hidden; 
+  box-sizing: border-box; 
+  border: 1px solid #f0def3; 
+  border-radius: 12px; 
+  box-shadow: 0 5px 15px rgba(245, 5, 245, 0.5);
+  text-align: right; 
+  line-height:14px; 
+  font-size: 12px; 
+  font-feature-settings: normal; 
+  text-size-adjust: 100%; 
+  padding:1px;
+  margin: 0px; 
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.widgetInner{
+  height:200px; 
+  padding:0px; 
+  margin:0px; 
+  width: 100%;
+}
+
+.widgetInner2{
+  height:540px; 
+  padding:0px; 
+  margin:0px; 
+  width: 100%;
+}
+
+#serchAPTable{
+  color: white;
+  width: 800px;
+  margin:auto;
+  margin-top: 3%;
+ border-collapse: collapse;
+ border-spacing: 0;
+ box-shadow: 0 5px 15px rgba(245, 5, 245, 0.5);
+ border-radius: 12px 12px 0 0;
+ overflow: hidden;
+}
+#searchMain{
+  text-align: center;
+  margin-top: 1%;
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+}
+#modalBodyHome, #modalBodyFav{
+ background-color: #f0def3; 
+}
+#modalHeaderHome, #modalFooterHome, #modalHeaderFav, #modalFooterFav{
+  background-color: #ba68c8;
+}
+#modalContentHome, #modalContentFav{
+  box-shadow: 0 5px 15px rgba(245, 5, 245, 0.5);
+ border-radius: 12px 12px 0 0;
+ background-image:url("/img/background.png") ; 
+}
+#favTable{
+  text-align: center;
+  margin:auto;
+  margin-top: 2%;
+}
+.errorMessagee{
+  color: rgb(174, 241, 143);
+  font-size: 20px;
+}
+#logInInvalid{
+  color: rgb(253, 5, 5);
+  font-size: 20px;
+}

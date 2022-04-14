@@ -1,0 +1,71 @@
+<%- include("Partials/headerInfo.ejs") %>
+<body >
+<div id="page-container">
+      <div id="content-wrap">
+  <header>
+    <a href="/signedInHome"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>
+  
+    <div class="signedhomeselect">   
+      
+        <a href="#" id="logout"><button name="logOut" class="signedhomeButton">Log Out</button></a>
+      
+      <form action="/favorites" method="GET">
+        <button name="fav" class="signedhomeButton" >Favorites</button>
+      </form>
+      <form action="/user/edit" method="GET">
+        <button name="account" class="signedhomeButton">Account</button>
+      </form>
+    </div>
+
+    <!--modal for log out-->
+
+  <div id="logoutModal" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div id="modalContentFav" class="modal-content">
+        <div id="modalHeaderFav" class="modal-header">
+          <h5 class="modal-title">Do you want to log out?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div id="modalBodyFav" class="modal-body">
+          <input type="radio" id="yes" name="yes" value="yes">
+          <label for="yes">YES</label><br>
+          <input type="radio" id="no" name="no" value="no">
+          <label for="yes">NO</label><br>
+        </div>
+        <div id="modalFooterHome" class="modal-footer">       
+            <button id= "submitButton" type="button" class="signedhomeButton" >Log Out</button>      
+        </div>
+      </div>
+    </div>
+  </div>
+  </header>
+  <h1 id="favoritesBody">Favorites</h1>
+  <main>
+    <table class="cointable" id="favTable">
+      <tr class="tbrow"> 
+        <th class="tbhead">Name</th>
+        <th class="tbhead">Price</th>
+        <th class="tbhead">High Price </th>
+        <th class="tbhead">Last Price </th>
+        <th class="tbhead">Volume</th>
+      </tr>
+      <tr class="tbrow">
+        <td class="tbrow" id="name"></td>   
+        <td class="tbrow" id="price"></td>
+        <td  class="tbrow" id="highPrice"></td>
+        <td  class="tbrow" id="lowPrice"></td>
+        <td class="tbrow" id="volume"></td>
+      </tr>
+    </table>
+
+  </main>
+    </div>
+  <footer id="favfoot">
+      <div class="csumb">
+        <%- include("Partials/footer") %>
+      </div>
+  </footer>
+  </div>
+</body>
+
+

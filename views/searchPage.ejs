@@ -1,0 +1,49 @@
+<%- include("Partials/headerInfo.ejs") %>
+<!-- -->
+<body>
+<div id="page-container">
+  <div id="content-wrap">
+    <header>        
+      <a href="/signedInHome"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>       
+    </header>
+    <h1 class="cryptoGateway">Search</h1>
+    <main>
+      <div id="searchMain">
+        <form action="/search" method="GET">
+              <span style="color:white;">Search Cryptos:</span>
+              <span>
+              <input name= "sea" type="text">
+              <button name="searchButton" type="submit" value = search class="homeButton">Search</button>
+              </span>
+        </form>
+      
+        <table id="serchAPTable">
+        <tr>
+        <th colspan="5"><h2>Full List of Coins</h2></th>
+        </tr>
+        <% for (i = 0; i < crypto.length; i++)  { %>
+        <tr>
+              <td><img src = <%= crypto[i].img %> class="Icon"><%= crypto[i].coinName%></td>
+              <td><%= crypto[i].symbol %></td>
+              <td><input type="hidden"  name="fId" value="<%= crypto[i].coin_id %>"></td>  
+            
+              <td><form action="/searchPage" method="POST">
+                <button name="favButton" id="favoriteButton" value="<%=crypto[i].coin_id%>" class="homeButton">Add to Favorites</button>
+              <td class="errorMessagee"><% if(typeof error != "undefined" ) { %>
+              <%= error %>
+              <% } %> </td> 
+              </form></td>
+          </tr>
+        <% } %>      
+        </table>
+      </div>
+    <main>
+  </div>
+    <footer>
+      <div class="csumb">
+        <%- include("Partials/footer") %>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

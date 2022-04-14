@@ -1,0 +1,60 @@
+<%- include("Partials/headerInfo.ejs") %>
+
+<body id="signUpBody">
+  <header>
+    <a href="/signedInHome"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>
+    <h1 class="title">Profile Page</h1>
+  </header>
+  <main>
+    <form action="/user/edit" method="POST" id="signUpform">
+      <table>
+        <tr>
+        <td></td>
+          <td class="errorMessagee">
+          <% if(typeof message != "undefined" ) { %>
+          <%= message %>
+          <% } %> 
+          </td>
+        </tr>
+        <tr>
+          <td>First Name:</td>
+          <td><input name="firstName" type="text" value="<%= userInfo[0].firstName%>" required><br></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td>
+          <td> <input name="lastName" type="text" value="<%= userInfo[0].lastName%>"required><br></td>
+        </tr>
+        <tr> 
+          <td>Email:</td>
+          <td> <input name="email" type="text" value="<%= userInfo[0].email%>"required><br><small id="emailHelp">We'll never share your email.</small><br></td>
+        </tr> 
+        <tr>
+          <td>Desired Username:</td>
+          <td><input name="userName" id="userNameBox" type="text" value="<%= userInfo[0].userName%>" required><span id="nameFeedback"></span></td>
+        </tr>
+        <tr>
+          <td>Password:</td>
+          <td><input name="password" id="passwordBox"  type="password" min="6" max="12" value="<%= userInfo[0].password%>"required><br><span id="suggPwd"></span><br></td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>Password Again:</td>
+          <td> <input name="password2" type="password" id ="reTypePassword" min="6" max="12" value="<%= userInfo[0].password%>" required><br><span id="validationOfPassword"></span></td>
+        </tr>
+        <tr></tr>
+        <tr>
+          <td>
+          </td>
+          <td><input name="submitButton" type="submit" id="submitButton" value="Edit Profile" class="homeButton"></td>
+        </tr>
+      </table>
+    </form>
+  </main>
+  <footer id="profileEditFoot">
+    <div class="csumb">
+      <%- include("Partials/footer") %>
+    </div>
+  </footer>
+  <script src="/js/script.js"></script>
+</body>
+</html>

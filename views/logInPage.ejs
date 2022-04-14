@@ -1,0 +1,44 @@
+<%- include("Partials/headerInfo.ejs") %>
+<a href="/"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>
+<h1 class="title">Log In</h1>
+
+<body id="signUpBody">
+  <div id="page-container">
+      <div id="content-wrap">
+        <main>
+          <form  id="loginform"  action="/logIn" method="POST">
+            <table id="loginTable">
+              <tr class="loginTr">
+                <td class="loginTd">Username:</td>
+                <td class="loginTd"><input name="userName" type="text" required><br></td>
+              </tr>
+              <tr class="loginTr">
+              </tr>
+              <tr class="loginTr">
+                <td class="loginTd">Password:</td>
+                <td><input name="password" type="password"></td>
+              </tr> 
+              <tr>
+                <td></td>
+                <td id="logInInvalid">
+                <% if(typeof error != "undefined" ) { %>
+                <%= error %>
+                <% } %> 
+                </td>
+              </tr>   
+              <tr class="loginTr">
+                <td>
+                </td>
+                <td class="loginTd"><button name="logInButton" class="homeButton">Log in</button></td>
+              </tr>
+            </table>
+          </form>
+        </main>
+      </div>
+      <br><br><br><br>
+        <footer class="loginFoot">
+          <div class="linkGraph" style="height:62px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%; pointer-events: none; "><div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe class = "linkGraph" src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark" width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;"></iframe></div></div>         
+        </footer>
+  </div>
+</body>
+</html>

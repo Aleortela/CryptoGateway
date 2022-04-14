@@ -1,0 +1,133 @@
+<%- include("Partials/headerInfo.ejs") %>
+<body>
+<div id="page-container">
+   <div id="content-wrap">
+  <header>
+    <a href="/"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>
+    <script src="js/coinTable.js"></script>
+    
+    <div class="homeselect">  
+      <form action="/homeSearch" method="GET">
+        <a href="/homeSearch" name="homeSearch"><img  src="https://img.icons8.com/external-icongeek26-outline-gradient-icongeek26/64/000000/external-chart-data-analytics-icongeek26-outline-gradient-icongeek26-1.png" class="searchIcon"/></a>
+      </form>
+      <form action="/signUpPage" method="GET">
+        <button name= "signUp" class="homeButton">Sign up</button>
+      </form>
+      <form action="/logInPage" method="GET">
+        <button name="logIn" class="homeButton">Login</button>
+      </form>
+    </div>
+  </header>
+
+  <h1 class="cryptoGateway">Crypto Gateway</h1>
+  <main>              
+    <table class="split">
+
+      <tr class="split-row">
+        <td class="split-data">
+          <table class="cointable">
+
+            <tr class="tbrow"> 
+              <th class="tbhead">Name</th>
+              <th class="tbhead">Price</th>
+              <th class="tbhead">High Price </th>
+              <th class="tbhead">Last Price </th>
+              <th class="tbhead">Volume</th>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin1"></td>
+              <td class="tbrow" id="coin1Price"></td>
+              <td  class="tbrow" id="coin1High"></td>
+              <td  class="tbrow" id="coin1Last"></td>
+              <td class="tbrow" id="coin1Vol"></td>
+            </tr>
+      
+            <tr class="tbrow">
+              <td class="tbrow" id="coin2"></td>
+              <td class="tbrow" id="coin2Price"></td>
+              <td class="tbrow" id="coin2High"></td>
+              <td class="tbrow" id="coin2Last"></td>
+              <td class="tbrow" id="coin2Vol"></td>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin3"></td>
+              <td class="tbrow" id="coin3Price"></td>
+              <td class="tbrow" id="coin3High"></td>
+              <td class="tbrow" id="coin3Last"></td>
+              <td class="tbrow" id="coin3Vol"></td>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin4"></td>
+              <td class="tbrow" id="coin4Price"></td>
+              <td class="tbrow" id="coin4High"></td>
+              <td class="tbrow" id="coin4Last"></td>
+              <td class="tbrow" id="coin4Vol"></td>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin5"></td>
+              <td class="tbrow" id="coin5Price"></td>
+              <td class="tbrow" id="coin5High"></td>
+              <td class="tbrow" id="coin5Last"></td>
+              <td class="tbrow" id="coin5Vol"></td>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin6"></td>
+              <td class="tbrow" id="coin6Price"></td>
+              <td class="tbrow" id="coin6High"></td>
+              <td class="tbrow" id="coin6Last"></td>
+              <td class="tbrow" id="coin6Vol"></td>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin7"></td>
+              <td class="tbrow" id="coin7Price"></td>
+              <td class="tbrow" id="coin7High"></td>
+              <td class="tbrow" id="coin7Last"></td>   
+              <td class="tbrow" id="coin7Vol"></td>
+            </tr>
+
+            <tr class="tbrow">
+              <td class="tbrow" id="coin8"></td>
+              <td class="tbrow" id="coin8Price"></td>
+              <td  class="tbrow" id="coin8High"></td>
+              <td class="tbrow" id="coin8Last"></td>
+              <td class="tbrow" id="coin8Vol"></td>
+            </tr>
+
+          </table>
+        </td>
+
+        <td class="split-data">
+            <div class ="widgetOuter">
+              <div class="widgetInner">
+                <iframe class ="linksGraph" src="https://widget.coinlib.io/widget?type=single_v2&theme=dark&coin_id=<%=coin[0].coin_id%>&pref_coin_id=1505" width="400" height="196px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"></iframe>
+              </div>
+            </div>
+
+            </br>
+            </br>
+            <div class ="widgetOuter">
+              <div class="widgetInner">
+                <iframe class ="linksGraph" src="https://widget.coinlib.io/widget?type=single_v2&theme=dark&coin_id=<%=coin2[0].coin_id%>&pref_coin_id=1505" width="400" height="196px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"></iframe>
+              </div>
+            </div>
+        </td>
+
+      </tr>
+
+    </table>
+
+</main>
+</div>
+  <footer>
+    <div class="csumb">
+      <%- include("Partials/footer") %>
+    </div>
+  </footer>
+  </div>
+</body>

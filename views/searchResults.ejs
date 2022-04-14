@@ -1,0 +1,31 @@
+<%- include("Partials/headerInfo.ejs") %>
+
+<body >
+  <div id="page-container">
+    <div id="content-wrap">
+      <header>        
+        <a href="/signedInHome"><img src="https://img.icons8.com/dusk/64/000000/home.png" alt="Icon" class="Icon"/></a>       
+      </header>
+      <h1 class="cryptoGateway">Search Result</h1>
+
+      <main>
+      <table id="serchAPTable">
+        <% for (i = 0; i < result.length; i++)  { %> 
+          <tr>     
+              <td><%= result[i].coinName%></td>
+              <td><%= result[i].symbol %></td> 
+              <td><img src = <%= result[i].img %> class="Icon"></td>
+              <td><button name="favButton" type="submit" value = fav class="homeButton">Add to Favorites</button></td>
+          </tr>
+            <% } %>
+      </table>
+      
+      </main>
+    </div>
+    <footer id="serchResultfoot">
+      <div class="csumb">
+        <%- include("Partials/footer") %>
+      </div>
+    </footer>
+  </div>
+</body>
